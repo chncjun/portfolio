@@ -1,0 +1,63 @@
+---
+const skills = [
+  'JavaScript',  'TypeScript', 'React',     'Next.js',
+  'Astro',       'Node.js',    'Python',    'Tailwind CSS',
+  'PostgreSQL',  'MongoDB',    'Docker',    'Git',
+  'REST APIs',   'Linux',      'AWS',       'Cloudflare',
+];
+---
+
+<section id="about" class="section-padding relative">
+  <div class="mx-auto max-w-6xl">
+
+    <!-- Heading -->
+    <div class="reveal mb-16 text-center">
+      <h2 class="mb-4 text-3xl font-bold text-white md:text-4xl">
+        About&nbsp;<span class="gradient-text">Me</span>
+      </h2>
+      <div class="mx-auto h-1 w-20 rounded-full bg-gradient-to-r from-primary-500 to-indigo-500"></div>
+    </div>
+
+    <div class="grid items-center gap-12 md:grid-cols-2">
+
+      <!-- Bio -->
+      <div class="reveal space-y-6">
+        <p class="text-lg leading-relaxed text-gray-300">
+          I'm a passionate developer who loves building things that live on the
+          internet. I focus on creating clean, efficient, and user-friendly
+          applications that solve real problems.
+        </p>
+        <p class="leading-relaxed text-gray-400">
+          Whether it's a sleek web app, a powerful API, or an innovative
+          developer tool, I enjoy the entire process of bringing ideas to life
+          through code. I'm always eager to learn new technologies and take on
+          challenges that push my skills further.
+        </p>
+        <p class="leading-relaxed text-gray-400">
+          When I'm not coding, you'll find me exploring new technologies,
+          contributing to open-source projects, or diving into system design
+          and architecture.
+        </p>
+      </div>
+
+      <!-- Tech stack card -->
+      <div class="reveal" style="transition-delay:.15s">
+        <div class="glass rounded-2xl p-8">
+          <h3 class="mb-6 text-xl font-semibold text-white">Tech Stack</h3>
+          <div class="flex flex-wrap gap-3">
+            {skills.map((s) => (
+              <span
+                class="cursor-default rounded-lg border border-primary-500/20
+                       bg-primary-500/10 px-4 py-2 text-sm font-medium
+                       text-primary-300 transition-all duration-200
+                       hover:border-primary-500/40 hover:bg-primary-500/20"
+              >
+                {s}
+              </span>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
