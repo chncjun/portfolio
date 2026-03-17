@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── Base ────────────────────────────────────────── */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+  }
+
+  body {
+    @apply bg-[#030014] text-gray-200 overflow-x-hidden;
+  }
+
+  ::selection {
+    @apply bg-primary-500/30 text-white;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-primary-700/60 rounded-full;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-primary-600;
+  }
+}
+
+/* ─── Reusable Components ─────────────────────────── */
+@layer components {
+  .glass {
+    @apply bg-white/[0.04] backdrop-blur-2xl border border-white/[0.08];
+  }
+
+  .glass-hover {
+    @apply hover:bg-white/[0.08] hover:border-white/[0.15] transition-all duration-300;
+  }
+
+  .gradient-text {
+    @apply bg-clip-text text-transparent
+           bg-gradient-to-r from-primary-400 via-purple-400 to-indigo-400;
+  }
+
+  .section-padding {
+    @apply px-4 sm:px-6 lg:px-8 py-20 md:py-32;
+  }
+
+  /* Scroll-triggered reveal */
+  .reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s cubic-bezier(0.17, 0.55, 0.55, 1),
+                transform 0.8s cubic-bezier(0.17, 0.55, 0.55, 1);
+  }
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
