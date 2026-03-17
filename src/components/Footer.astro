@@ -1,0 +1,26 @@
+---
+const year = new Date().getFullYear();
+---
+
+<footer class="border-t border-white/5 py-8">
+  <div class="mx-auto flex max-w-6xl flex-col items-center justify-between
+              gap-4 px-4 sm:px-6 md:flex-row lg:px-8">
+    <p class="text-sm text-gray-500">
+      &copy; {year} Jun Cui &mdash; Built with
+      <a href="https://astro.build" target="_blank"
+         class="text-primary-400 transition-colors hover:text-primary-300">Astro</a>
+      &amp;
+      <a href="https://tailwindcss.com" target="_blank"
+         class="text-primary-400 transition-colors hover:text-primary-300">Tailwind&nbsp;CSS</a>
+    </p>
+
+    <div class="flex items-center gap-6 text-sm">
+      <a href="https://github.com/chncjun" target="_blank" rel="noopener noreferrer"
+         class="text-gray-500 transition-colors hover:text-white">GitHub</a>
+      <a href="https://linkedin.com/in/" target="_blank" rel="noopener noreferrer"
+         class="text-gray-500 transition-colors hover:text-white">LinkedIn</a>
+      <a href="mailto:hello@juncui.me"
+         class="text-gray-500 transition-colors hover:text-white">Email</a>
+    </div>
+  </div>
+</footer>
